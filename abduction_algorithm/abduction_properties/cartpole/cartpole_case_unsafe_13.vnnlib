@@ -1,0 +1,32 @@
+; cartpole property unsafe_13
+
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+
+(declare-const Y_0 Real)
+(declare-const Y_1 Real)
+
+; Input 0
+(assert (>= X_0  0.07821907000000000165))
+(assert (<= X_0  0.07821907000000000165))
+
+; Input 1
+(assert (>= X_1  0.20037708000000001296))
+(assert (<= X_1  0.20037708000000001296))
+
+; Input 2
+(assert (>= X_2 -0.12101053999999999977))
+(assert (<= X_2 -0.12101053999999999977))
+
+; Input 3
+(assert (>= X_3 -0.41137950000000000905))
+(assert (<= X_3 -0.41137950000000000905))
+
+; model prediction:[4.87600088 4.72256994]
+; action chosen was 0 (argmax)
+; output constraints for counterexample
+(assert 
+(>= Y_1 Y_0)
+)

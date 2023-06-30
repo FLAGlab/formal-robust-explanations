@@ -1,0 +1,63 @@
+; dubinsrejoin property unsafe_4
+
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+(declare-const X_4 Real)
+(declare-const X_5 Real)
+(declare-const X_6 Real)
+(declare-const X_7 Real)
+
+(declare-const Y_0 Real)
+(declare-const Y_1 Real)
+(declare-const Y_2 Real)
+(declare-const Y_3 Real)
+(declare-const Y_4 Real)
+(declare-const Y_5 Real)
+(declare-const Y_6 Real)
+(declare-const Y_7 Real)
+
+; Input 0
+(assert (>= X_0  0.04956305114240230902))
+(assert (<= X_0  0.04956305114240230902))
+
+; Input 1
+(assert (>= X_1 -0.46244699227678470743))
+(assert (<= X_1 -0.46244699227678470743))
+
+; Input 2
+(assert (>= X_2 -0.44060832312920455989))
+(assert (<= X_2 -0.44060832312920455989))
+
+; Input 3
+(assert (>= X_3 -0.36379597178187161877))
+(assert (<= X_3 -0.36379597178187161877))
+
+; Input 4
+(assert (>= X_4  0.50000000000000000000))
+(assert (<= X_4  0.50000000000000000000))
+
+; Input 5
+(assert (>= X_5  0.00000000000000000000))
+(assert (<= X_5  0.00000000000000000000))
+
+; Input 6
+(assert (>= X_6  0.15965139727794819269))
+(assert (<= X_6  0.15965139727794819269))
+
+; Input 7
+(assert (>= X_7 -0.47382637257459481184))
+(assert (<= X_7 -0.47382637257459481184))
+
+; model prediction:[ 18.11470222  11.59681988 -13.88439274 -37.27721786][  6.2258606   -1.39501071  -0.5724138  -16.45469284]
+; action chosen was 0 (first actuator) 4 (second actuator)
+; output constraints for counterexample
+(assert (or
+(and (>= Y_1 Y_0))
+(and (>= Y_2 Y_0))
+(and (>= Y_3 Y_0))
+(and (>= Y_5 Y_4))
+(and (>= Y_6 Y_4))
+(and (>= Y_7 Y_4))
+))

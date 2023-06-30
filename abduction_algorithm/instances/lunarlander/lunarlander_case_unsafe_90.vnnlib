@@ -1,0 +1,56 @@
+; lunarlander property unsafe_90
+
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+(declare-const X_4 Real)
+(declare-const X_5 Real)
+(declare-const X_6 Real)
+(declare-const X_7 Real)
+
+(declare-const Y_0 Real)
+(declare-const Y_1 Real)
+(declare-const Y_2 Real)
+(declare-const Y_3 Real)
+
+; Input 0
+(assert (>= X_0 -0.76936470000000001246))
+(assert (<= X_0 -0.76936470000000001246))
+
+; Input 1
+(assert (>= X_1  0.03067003199999999985))
+(assert (<= X_1  0.03067003199999999985))
+
+; Input 2
+(assert (>= X_2 -0.02013034699999999635))
+(assert (<= X_2 -0.02013034699999999635))
+
+; Input 3
+(assert (>= X_3  3.92952510210032190940))
+(assert (<= X_3  3.92952510210032190940))
+
+; Input 4
+(assert (>= X_4  0.04653148399999999796))
+(assert (<= X_4  0.04653148399999999796))
+
+; Input 5
+(assert (>= X_5  0.01519825500000000079))
+(assert (<= X_5  0.01519825500000000079))
+
+; Input 6
+(assert (>= X_6  1.00000000000000000000))
+(assert (<= X_6  1.00000000000000000000))
+
+; Input 7
+(assert (>= X_7  1.00000000000000000000))
+(assert (<= X_7  1.00000000000000000000))
+
+; model prediction:[ 9.62287998  8.9111557  -6.93771076  7.17581511]
+; action chosen was 0 (argmax)
+; output constraints for counterexample
+(assert (or
+(and (>= Y_1 Y_0))
+(and (>= Y_2 Y_0))
+(and (>= Y_3 Y_0))
+))

@@ -1,0 +1,21 @@
+general:
+  device: cpu
+  enable_incomplete_verification: false
+  loss_reduction_func: max
+  conv_mode: patches
+model:
+  onnx_path: /root/abduction_algorithm/onnx_models/cartpole.onnx
+specification:
+  vnnlib_path: /root/abduction_algorithm/abduction_properties/cartpole/cartpole_case_unsafe_8.vnnlib
+solver:
+  batch_size: 1
+  bound_prop_method: forward+backward
+  beta-crown:
+    iteration: 10
+bab:
+  branching:
+    method: sb
+    input_split:
+      enable: true
+attack:
+  pgd_order: skip

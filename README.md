@@ -35,7 +35,7 @@ git clone https://github.com/Verified-Intelligence/alpha-beta-CROWN
 Change directory to the alpha-beta-CROWN verifier folder and install the tool as as a conda environment. The requirements are found in the environment.yml file. 
 
 ```
-cd ~/alpha-beta-CROWN/complete_verifier folder
+cd ~/alpha-beta-CROWN/complete_verifier
 conda env create -f environment.yml --name alpha-beta-crown
 ```
 
